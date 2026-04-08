@@ -1,0 +1,27 @@
+[project]
+name = "tuitree"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Marcus Willock",email = "crazcalm@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14,<4.0"
+dependencies = [
+    "textual (>=8.2.3,<9.0.0)"
+]
+
+[project.scripts]
+tuitree = "tuitree.cli.gui:main"
+
+[tool.poetry]
+packages = [{include = "tuitree", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.15.9,<0.16.0)"
+]
